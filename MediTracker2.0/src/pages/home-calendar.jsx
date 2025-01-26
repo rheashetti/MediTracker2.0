@@ -6,8 +6,8 @@ const HomeCalendar = () => {
   return (
     <div className="container">
       <header className="App-header">
-      <div className="greeting">Hello, patient!</div>
-      <div className="patient-info">Birthdate: </div>
+      <div className="greeting">Hello, Patient!</div>
+      <div className="patient-info">DOB: </div>
       </header>
       <main className="main-content">
       <div className="Calendar">
