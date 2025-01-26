@@ -75,7 +75,7 @@ const MedicineBook = () => {
 
     setMedications([...medications, newMedication]);
     // Send a POST request to Flask to add the medication
-    axios.post('http://localhost:5000/addmed', newMedication)
+    axios.post('http://127.0.0.1:5000/addmed', newMedication)
       .then(response => {
         setMedications(response.data.medications); // Update the medications state
         setNewMedication({
@@ -101,10 +101,9 @@ const MedicineBook = () => {
   };
 
   return (
-    <div className="app-container">
-      <div>
-        <h2>MediTracker</h2>
-      </div>
+    <div >
+        <h1 >MediTracker</h1>
+
 
       {/* Add Medication Form */}
       <form onSubmit={handleAddMedication} className="medication-form">
