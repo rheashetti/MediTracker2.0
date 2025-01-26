@@ -38,21 +38,26 @@ const MedicineBook = () => {
     }
   };
 
-  const handleAddMedication = (e) => {
+const handleAddMedication = (e) => {
     e.preventDefault();
+
     setMedications([...medications, newMedication]);
-    axios
-      .post('http://localhost:5000/addmed', newMedication)
-      .then((response) => {
-        setMedications(response.data.medications); // Update medications list
-        setNewMedication({
-          title: '',
-          description: '',
-          Dosage: '',
-          imgSrc: '',
-          schedule: { days: [], time: '' },
-        }); // Reset form
-      });
+    // Send a POST request to Flask to add the medication
+    axios.post('http://127.0.0.1:5000/add/medicine', {
+      patient_name: "MARTY", med_name: newMedication.title, dosage: newMedication.Dosage, schedule: "SUNDAY"
+    })
+      
+      
+    // Add the new medication to the list
+    //setMedications([...medications, newMedication]);
+    // Reset the form
+    setNewMedication({
+      title: '',
+      description: '',
+      Dosage: '',
+      imgSrc: '',
+      schedule: { days: [], time: '' },
+    });
   };
 
   return (
