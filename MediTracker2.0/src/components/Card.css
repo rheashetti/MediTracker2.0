@@ -1,0 +1,73 @@
+.card-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .card-image {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  .card-content {
+    margin-top: 15px;
+  }
+  
+  .card-description {
+    font-size: 0.9em;
+  }
+  
+  .card-dosage {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .medication-form {
+    margin-bottom: 20px;
+  }
+  
+  .medication-form input {
+    margin: 5px;
+    padding: 8px;
+    font-size: 1em;
+  }
+  
+  .medication-form button {
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .medication-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+  .medication-schedule {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .medication-schedule h4 {
+    margin: 0;
+    font-weight: bold;
+  }
+  
