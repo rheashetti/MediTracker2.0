@@ -1,73 +1,95 @@
-.card-container {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-  }
-  
-  .card-image {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .card-title {
-    font-size: 1.2em;
-    margin-top: 10px;
-  }
-  
-  .card-content {
-    margin-top: 15px;
-  }
-  
-  .card-description {
-    font-size: 0.9em;
-  }
-  
-  .card-dosage {
-    font-size: 1em;
-    font-weight: bold;
-  }
-  
-  .medication-form {
-    margin-bottom: 20px;
-  }
-  
-  .medication-form input {
-    margin: 5px;
-    padding: 8px;
-    font-size: 1em;
-  }
-  
-  .medication-form button {
-    padding: 10px 15px;
-    font-size: 1em;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .medication-form button:hover {
-    background-color: #45a049;
-  }
-  
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.medi-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #e1ffd2; /* Add a background color to avoid transparency issues */
+  z-index: 100; /* Keep header above other elements */
+  padding: 10px;
+  text-align: center;
+}
 
-  
-  .medication-schedule {
-    margin-top: 10px;
-    font-size: 0.9rem;
-  }
-  
-  .medication-schedule h4 {
-    margin: 0;
-    font-weight: bold;
-  }
-  
+.form {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px; /* Adds space below the fixed header */
+  padding: 20px;
+  z-index: 10; /* Make sure the form is above other elements */
+}
+
+.medic-container {
+  padding-top: 60px; /* Adjust this based on your header height */
+}
+
+.medication-form {
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  top: 10%;
+  margin-top:20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+  margin-bottom: 20px;
+}
+
+.medication-form input {
+  margin: 5px;
+  padding: 8px;
+  font-size: 1em;
+}
+
+.medication-form button {
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.medication-form button:hover {
+  background-color: #45a049;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 400px; /* Limit the height of the container */
+  padding: 10px;
+  margin-bottom: 100px;
+}
+
+.card-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.card-image {
+  width: 40px;
+  height: 40px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.card-content {
+  margin-top: 15px;
+}
+
+.card-description {
+  font-size: 0.9em;
+}
+
+.card-dosage {
+  font-size: 1em;
+  font-weight: bold;
+}

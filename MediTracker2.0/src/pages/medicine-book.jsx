@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Card from '../components/Card';
 import axios from 'axios';
 
+
 const MedicineBook = () => {
   // Initial state with some default medication data
   const [medications, setMedications] = useState([
@@ -75,17 +76,9 @@ const MedicineBook = () => {
 
     setMedications([...medications, newMedication]);
     // Send a POST request to Flask to add the medication
-    axios.post('http://localhost:5000/addmed', newMedication)
-      .then(response => {
-        setMedications(response.data.medications); // Update the medications state
-        setNewMedication({
-          title: '',
-          description: '',
-          Dosage: '',
-          imgSrc: '',
-          schedule: { days: [], time: '' },
-        }); // Reset the form
-      })
+    axios.post('http://127.0.0.1:5000/add/medicine', {
+      patient_name: "MARTY", med_name: newMedication.title, dosage: newMedication.Dosage, schedule: "SUNDAY"
+    })
       
       
     // Add the new medication to the list
@@ -101,10 +94,9 @@ const MedicineBook = () => {
   };
 
   return (
-    <div className="app-container">
-      <div>
-        <h2>MediTracker</h2>
-      </div>
+    <div >
+        <h1 >MediTracker</h1>
+
 
       {/* Add Medication Form */}
       <form onSubmit={handleAddMedication} className="medication-form">
