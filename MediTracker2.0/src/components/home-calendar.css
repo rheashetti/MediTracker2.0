@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
 }
 
 .App-header {
@@ -39,9 +38,75 @@
 }
 
 .Calendar {
-  padding: 1rem;
-  font-size: 1rem;
+  display: flex;
+  margin-top: -8rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: auto;
-  margin-top: 2rem;
+  margin-left: .5em;
+  margin-right: auto;
+}
+
+/* Date picker styles */
+.date-picker {
+  display: flex;
+  gap: 8px; /* Space between buttons */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  padding-bottom: 16px;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Date button styles */
+.date-button {
+  width: 60px; /* Make them squares */
+  height: 60px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.date-button:hover {
+  background-color: #e6e6e6;
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.date-button.active {
+  background-color: #45a049;
+  color: white;
+  border-color: #45a049;
+}
+
+/* Events container styles */
+.events-container {
+  margin-top: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.event-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.event-card p {
+  margin: 4px 0 0;
+  color: #666;
 }
