@@ -4,12 +4,26 @@
   align-items: center;
 }
 
+.medi-header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 13%;
+  background-color: #e1ffd2;
+  font-size: small;
+  text-align: center;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+}
+
 .App-header {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 0;
-  left: 0;
+  top:15%;
+  left: 3%;
 }
 
 .main-content {
@@ -21,7 +35,7 @@
 
 .greeting {
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   width: 100%;
   text-align: left;
@@ -34,12 +48,15 @@
   font-weight: bold;
   width: 100%;
   text-align: left;
-  margin-top: -1.5rem;
+  margin-top: -2rem;
 }
 
 .Calendar {
   display: flex;
-  margin-top: -8rem;
+  position: fixed;
+  top: 26%; /* Adjust this value as needed */
+  right: 0;
+  margin-top: 0; /* Remove the negative margin */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -87,7 +104,7 @@
 /* Events container styles */
 .events-container {
   margin-top: 24px;
-  width: 100%;
+  width: 90%;
   max-width: 400px;
 }
 

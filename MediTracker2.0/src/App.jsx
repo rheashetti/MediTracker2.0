@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import HomeCalendar from "./pages/home-calendar";
-import MedicineBook from "./pages/medicine-book";
+import MedicineBook from "./components/medicine-book";
 
 const App = () => {
   return (
